@@ -1,0 +1,15 @@
+country: china
+province: beijing
+city: beijing
+area: haidian
+a:
+  b:
+    c:
+      e: 123
+likes:
+  - game
+  - music
+
+user1:
+  name: kang
+  age: 16
