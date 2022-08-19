@@ -13,3 +13,9 @@ likes:
 user1:
   name: kang
   age: 16
+
+datasource:
+  driver: com.mysql.jdbc.driver
+  url: jdbc:mysql://localhost/springboot
+  username: root
+  password: root666
