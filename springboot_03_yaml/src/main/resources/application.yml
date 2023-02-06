@@ -11,18 +11,19 @@ likes:
   - game
   - music
 # 多个数据使用 减号 + 空格
-likes2: [game, music]
+likes2: [ game, music ]
 user1:
   name: kang1
   age: 18
 user3:
-  -
-    name: kang1
+  - name: kang1
     age: 18
-  -
-    name: kang2
+  - name: kang2
     age: 27
-user2: [{name:kang1,age:18},{name:kang2,age:27}]
+user2: [ { name:kang1,age:18 },{ name:kang2,age:27 } ]
+# 创建类，用于封装下面数据
+# 由spring帮我们加载数据到对象中，一定要告诉spring加载这组信息
+# 使用的时候从spring中直接获取信息使用
 datasource:
   driver: com.mysql.jdbc.driver
   url: jdbc:mysql://localhost/springboot
@@ -32,3 +33,7 @@ datasource:
 # 使用双引号包裹的字符串，其中的转义字符可以生效
 baseDir: c:\windows\system32
 tempDir: ${baseDir}\tempdir
+server:
+  port: 8080
+  servlet:
+    context-path: /test

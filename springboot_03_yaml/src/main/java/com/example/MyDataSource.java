@@ -1,12 +1,13 @@
 package com.example;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
-//1. 定义数据模型封装yaml文件中对应的数据
-//2. 定义为spring管控的bean
+// 1. 定于数据模型封装yaml文件中对应的数据
+// 2. 定义为spring管控的bean
 @Component
-//3. 制定加载的数据
+// 3. 指定加载的数据
 @ConfigurationProperties(prefix = "datasource")
 public class MyDataSource {
     private String driver;
@@ -15,7 +16,8 @@ public class MyDataSource {
     private String password;
 
     @Override
-    public String toString() {
+    public String
+    toString() {
         return "MyDataSource{" +
                 "driver='" + driver + '\'' +
                 ", url='" + url + '\'' +
