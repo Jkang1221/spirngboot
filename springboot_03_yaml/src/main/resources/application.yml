@@ -1,3 +1,4 @@
+# 必须冒号后面加一个空格来使用
 country: china
 province: beijing
 city: beijing
@@ -9,13 +10,25 @@ a:
 likes:
   - game
   - music
-
+# 多个数据使用 减号 + 空格
+likes2: [game, music]
 user1:
-  name: kang
-  age: 16
-
+  name: kang1
+  age: 18
+user3:
+  -
+    name: kang1
+    age: 18
+  -
+    name: kang2
+    age: 27
+user2: [{name:kang1,age:18},{name:kang2,age:27}]
 datasource:
   driver: com.mysql.jdbc.driver
   url: jdbc:mysql://localhost/springboot
   username: root
   password: root666
+#  使用${} 引用，
+# 使用双引号包裹的字符串，其中的转义字符可以生效
+baseDir: c:\windows\system32
+tempDir: ${baseDir}\tempdir
