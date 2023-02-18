@@ -14,14 +14,15 @@ public class BookDaoTestCase {
     @Autowired
     private BookDao bookDao;
     @Test
-    void testByid(){
-        System.out.println(bookDao.selectById(1));
+    void testByID(){
+//        System.out.println(bookDao.selectById(1));
+        bookDao.selectById(2);
     }
 
     @Test
     void testSave(){
         Book book = new Book();
-        book.setType("testType1");
+        book.setType("123123123123");
         book.setName("testName");
         book.setDescription("testDescription");
         bookDao.insert(book);
@@ -29,7 +30,7 @@ public class BookDaoTestCase {
     @Test
     void testUpdate(){
         Book book = new Book();
-        book.setId(13);
+        book.setId(1);
         book.setType("testType111");
         book.setName("testName111");
         book.setDescription("testDescription");
@@ -37,7 +38,7 @@ public class BookDaoTestCase {
     }
     @Test
     void  testDelete(){
-        bookDao.deleteById(12);
+        bookDao.deleteById(19);
     }
     @Test
     void testGetAll(){
@@ -46,7 +47,11 @@ public class BookDaoTestCase {
     @Test
     void testGetPage(){
         IPage page = new Page(1,5);
-        bookDao.selectPage(page,null);
+        bookDao.selectPage(page, null);
+        System.out.println(page.getRecords());
+        System.out.println(page.getPages());
+        System.out.println(page.getCurrent());
+        System.out.println(page.getSize());
     }
     @Test
     void  testGetBy() {
