@@ -8,7 +8,7 @@ import com.example.domain.Book;
 import com.example.service.IBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+// MybatisPlus version
 @Service
 public class BookServiceImpl extends ServiceImpl<BookDao, Book> implements IBookService {
     @Autowired

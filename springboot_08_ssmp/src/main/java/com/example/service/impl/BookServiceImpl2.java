@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+// CRUD
 @Service
 public class BookServiceImpl2 implements BookService {
     @Autowired

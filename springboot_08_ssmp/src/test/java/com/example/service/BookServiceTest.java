@@ -48,7 +48,7 @@ public class BookServiceTest {
 
     @Test
     void testGetPage() {
-        IPage<Book> page = new Page<>(2,5);
+        IPage<Book> page = new Page<>(2, 5);
 
         bookService.page(page);
         System.out.println(page.getPages());
