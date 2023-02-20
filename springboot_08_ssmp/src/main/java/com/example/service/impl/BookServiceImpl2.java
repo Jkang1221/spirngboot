@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 // CRUD
-@Service
+//@Service
 public class BookServiceImpl2 implements BookService {
     @Autowired
     private BookDao bookDao;

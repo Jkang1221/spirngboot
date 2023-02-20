@@ -10,7 +10,8 @@ import java.util.List;
 
 // 表现层
 //@RestController
-@RequestMapping("/books")
+//@RequestMapping("/books")
+
 public class BookController2 {
     // 业务层
     // 实体用@RequestBody，单个参数使用@PathVariable
@@ -26,6 +27,7 @@ public class BookController2 {
 
     @PostMapping
     public boolean save(@RequestBody Book book) {
+        System.out.println(1111);
         return bookService.saveBook(book);
     }
 
@@ -48,6 +50,6 @@ public class BookController2 {
     @GetMapping("/{currentPage}/{pageSize}")
     public IPage<Book> getPage(@PathVariable int currentPage, @PathVariable int pageSize) {
 //        return bookService.page(id);
-        return bookService.getPage(currentPage, pageSize);
+        return bookService.getPage(currentPage, pageSize, null);
     }
 }

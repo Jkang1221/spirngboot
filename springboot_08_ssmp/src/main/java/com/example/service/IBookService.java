@@ -9,6 +9,8 @@ public interface IBookService extends IService<Book> {
     boolean saveBook(Book book);
     boolean modifyBook(Book book);
     boolean delete(Integer id);
+    IPage<Book> getPage(int currentPage, int pageSize);
+    IPage<Book> getPage(int currentPage, int pageSize, Book book);
 
-    IPage<Book> getPage(int currentPage,int pageSize);
+
 }
